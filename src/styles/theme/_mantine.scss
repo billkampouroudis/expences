@@ -47,7 +47,7 @@ $breakpoints: (
 }
 
 @mixin media-to($key) {
-  @media (max-width: get-breakpoint($key)) {
+  @media (max-width: calc((get-breakpoint($key)) - 1px)) {
     @content;
   }
 }

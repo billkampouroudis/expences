@@ -1,8 +1,13 @@
-@use './mantine' as mantine;
+.heading {
+  @include mantine.dark {
+    color: var(--mantine-color-gray-3);
+  }
 
-:root {
-  // Responsive titles
-  h1 {
+  @include mantine.light {
+    color: var(--mantine-color-gray-8);
+  }
+
+  &:is(h1) {
     font-size: 2rem;
 
     @include mantine.media-from(md) {
@@ -14,7 +19,7 @@
     }
   }
 
-  h2 {
+  &:is(h2) {
     font-size: 1.75rem;
 
     @include mantine.media-from(md) {
@@ -26,7 +31,7 @@
     }
   }
 
-  h3 {
+  &:is(h3) {
     font-size: 1.5rem;
 
     @include mantine.media-from(md) {
@@ -38,7 +43,7 @@
     }
   }
 
-  h4 {
+  &:is(h4) {
     font-size: 1.25rem;
 
     @include mantine.media-from(md) {
@@ -50,7 +55,7 @@
     }
   }
 
-  h5 {
+  &:is(h5) {
     font-size: 1rem;
 
     @include mantine.media-from(md) {
@@ -62,7 +67,7 @@
     }
   }
 
-  h5 {
+  &:is(h6) {
     font-size: 0.875rem;
 
     @include mantine.media-from(md) {
@@ -72,5 +77,15 @@
     @include mantine.media-from(lg) {
       font-size: 1.25rem;
     }
+  }
+}
+
+.text {
+  @include mantine.dark {
+    color: var(--mantine-color-gray-4);
+  }
+
+  @include mantine.light {
+    color: var(--mantine-color-gray-8);
   }
 }

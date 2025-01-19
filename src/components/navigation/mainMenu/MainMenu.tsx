@@ -17,7 +17,7 @@ function MainMenu() {
       <Tabs.List grow justify="center">
         <Tabs.Tab value="/">First tab</Tabs.Tab>
         <Tabs.Tab value="/second">Second tab</Tabs.Tab>
-        <Tabs.Tab value="/third">Second tab</Tabs.Tab>
+        <Tabs.Tab value="/third">Third tab</Tabs.Tab>
       </Tabs.List>
     </Tabs>
   );

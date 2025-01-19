@@ -1,5 +1,49 @@
-.mainLayoutWrapper {
-  padding-bottom: 48px;
+$headerHeight: 270px;
+$mainContentOffset: -30px;
 
-  // @include mantine.larger-than(mantine.$mantine-breakpoint-md) {}
+.mainContainer {
+  padding: 0;
+  position: relative;
+
+  @include mantine.media-to(md) {
+    --container-size: fluid !important;
+  }
+
+  .header {
+    background: linear-gradient(30deg, #078a69, #07bb8e);
+    min-height: $headerHeight;
+    padding: 20px 20px 50px;
+
+    position: sticky;
+    top: 0;
+
+    @include mantine.media-from(md) {
+      padding: 32px 32px 50px;
+      margin-top: 20px;
+      border-radius: var(--mantine-radius-lg) var(--mantine-radius-lg) 0 0;
+      position: static;
+      top: unset;
+    }
+  }
+
+  .content {
+    margin-top: $mainContentOffset;
+    border-radius: var(--mantine-radius-lg);
+    padding: 20px;
+    z-index: 1;
+
+    @include mantine.media-from(md) {
+      padding: 32px;
+    }
+
+    @include mantine.media-to(md) {
+      @include mantine.dark {
+        background-color: var(--mantine-color-dark-7);
+      }
+
+      @include mantine.light {
+        background-color: var(--mantine-color-gray-0);
+      }
+    }
+  }
 }
