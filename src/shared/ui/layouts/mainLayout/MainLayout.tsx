@@ -1,5 +1,5 @@
-import { MainLayoutProps } from './mainlayout.types.ts';
-// import MainMenu from '../../navigation/mainMenu/MainMenu.tsx';
+import { MainLayoutProps } from './mainLayout.types.ts';
+// import MainMenu from '../../menus/mainMenu/MainMenu.tsx';
 import { Card, Container, Paper } from '@mantine/core';
 import styles from './mainLayout.module.scss';
 
@@ -15,7 +15,7 @@ export function Content({ children }: any) {
   return <Card className={styles.content}>{children}</Card>;
 }
 
-function MainLayout(props: MainLayoutProps) {
+export function MainLayout(props: MainLayoutProps) {
   const { children } = props;
 
   return (
@@ -26,5 +26,3 @@ function MainLayout(props: MainLayoutProps) {
     </Paper>
   );
 }
-
-export default MainLayout;

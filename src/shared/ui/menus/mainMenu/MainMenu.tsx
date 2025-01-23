@@ -2,7 +2,7 @@ import { Tabs } from '@mantine/core';
 import { useLocation, useNavigate } from 'react-router';
 import styles from './mainMenu.module.scss';
 
-function MainMenu() {
+export function MainMenu() {
   const navigate = useNavigate();
   const location = useLocation(); // Get the current location from react-router
   const currentPath = location.pathname; // Extract the current URL path
@@ -22,5 +22,3 @@ function MainMenu() {
     </Tabs>
   );
 }
-
-export default MainMenu;

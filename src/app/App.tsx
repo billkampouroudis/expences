@@ -1,8 +1,8 @@
 import { MantineProvider } from '@mantine/core';
-import HomePage from './pages/Home';
-import theme from './styles/theme/theme';
+import theme from '../shared/ui/theme';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import NotFound from './pages/NotFound';
+import { HomePage } from '../pages/home';
+import { NotFoundPage } from '../pages/notFound';
 
 function App() {
   return (
@@ -10,9 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        {/* <MainMenu /> */}
       </BrowserRouter>
     </MantineProvider>
   );

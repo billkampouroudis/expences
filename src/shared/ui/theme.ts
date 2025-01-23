@@ -1,7 +1,7 @@
 import { createTheme, Text, Title } from '@mantine/core';
-import styles from './_typography.module.scss';
+import styles from '@shared/styles/theme/typography.module.scss';
 
-// values must be the same as in your _mantine.scss
+// values must be the same as in your mantine.scss
 export const breakpoints: Record<string, string> = {
   xs: '0',
   sm: '33em', // 528px

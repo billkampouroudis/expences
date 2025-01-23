@@ -1,5 +1,5 @@
 import { useMediaQuery } from '@mantine/hooks';
-import { breakpoints } from '../styles/theme/theme';
+import { breakpoints } from '../shared/ui/theme';
 
 /**
  * Determines the current screen size based on predefined breakpoints

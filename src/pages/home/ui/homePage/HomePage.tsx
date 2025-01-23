@@ -1,7 +1,7 @@
-import MainLayout, { Header, Content } from '@/components/layouts/mainLayout/MainLayout';
+import { MainLayout, Header, Content } from '@/shared/ui/layouts/mainLayout';
 import { Center, Text, Title } from '@mantine/core';
 
-function Home() {
+export function HomePage() {
   return (
     <MainLayout>
       <Header>
@@ -14,5 +14,3 @@ function Home() {
     </MainLayout>
   );
 }
-
-export default Home;
