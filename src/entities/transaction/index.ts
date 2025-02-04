@@ -1,1 +1,1 @@
-export { type Transaction } from './model';
+export { type TransactionType, type Transaction } from './model';

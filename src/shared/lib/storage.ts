@@ -5,6 +5,6 @@ export const getStorage = async (key: string) => {
   return value ? JSON.parse(value) : null;
 };
 
-export const setStorage = async (value: any) => {
-  return await Preferences.set({ key: 'storage', value });
+export const setStorage = async (key: string, value: any) => {
+  return await Preferences.set({ key, value });
 };

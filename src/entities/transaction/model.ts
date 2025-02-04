@@ -1,16 +1,11 @@
-import { CategoryType } from '../category/model';
+export type TransactionType = 'inc' | 'exp';
 
-export type CreateTransaction = {
-  title: string;
+export type Transaction = {
+  id: string;
   categoryId: string;
   amount: number;
   datetime: string;
-  categoryType: CategoryType;
-};
-
-export type UpdateTransaction = Partial<CreateTransaction>;
-
-export type Transaction = CreateTransaction & {
-  id: string;
+  description: string;
+  categoryType: TransactionType;
   createdAt: string;
 };
