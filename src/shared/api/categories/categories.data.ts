@@ -1,92 +1,77 @@
-import { Category } from '@/entities/category';
-import { DateTime } from 'luxon';
 import { v4 as uuidv4 } from 'uuid';
-
-export const categoryIds = {
-  housing: uuidv4(),
-  groceries: uuidv4(),
-  transportation: uuidv4(),
-  healthcare: uuidv4(),
-  debts: uuidv4(),
-  other: uuidv4(),
-  paycheck: uuidv4(),
-  gift: uuidv4(),
-};
+import {
+  Category,
+  categoryTypes,
+  expenseCategoryTitles,
+  incomeCategoryTitles,
+} from '@/entities/category';
+import { DateTime } from 'luxon';
 
 export const categories: Category[] = [
   // Expenses
   {
-    id: categoryIds.housing,
-    title: 'Housing',
-    categoryType: 'exp',
+    id: uuidv4(),
+    title: expenseCategoryTitles.housing,
+    categoryType: categoryTypes.expense,
     createdAt: DateTime.now().toISO(),
-    icon: '🏠',
     transactionsCount: 0,
   },
   {
-    id: categoryIds.groceries,
-    title: 'Groceries',
-    categoryType: 'exp',
+    id: uuidv4(),
+    title: expenseCategoryTitles.groceries,
+    categoryType: categoryTypes.expense,
     createdAt: DateTime.now().toISO(),
-    icon: '🍎',
     transactionsCount: 0,
   },
   {
-    id: categoryIds.transportation,
-    title: 'Transportation',
-    categoryType: 'exp',
+    id: uuidv4(),
+    title: expenseCategoryTitles.transportation,
+    categoryType: categoryTypes.expense,
     createdAt: DateTime.now().toISO(),
-    icon: '🚗',
     transactionsCount: 0,
   },
   {
-    id: categoryIds.healthcare,
-    title: 'Healthcare',
-    categoryType: 'exp',
+    id: uuidv4(),
+    title: expenseCategoryTitles.healthcare,
+    categoryType: categoryTypes.expense,
     createdAt: DateTime.now().toISO(),
-    icon: '🏥',
     transactionsCount: 0,
   },
   {
-    id: categoryIds.debts,
-    title: 'Debts',
-    categoryType: 'exp',
+    id: uuidv4(),
+    title: expenseCategoryTitles.debts,
+    categoryType: categoryTypes.expense,
     createdAt: DateTime.now().toISO(),
-    icon: '💳',
     transactionsCount: 0,
   },
   {
-    id: categoryIds.other,
-    title: 'Food',
-    categoryType: 'exp',
+    id: uuidv4(),
+    title: expenseCategoryTitles.other,
+    categoryType: categoryTypes.expense,
     createdAt: DateTime.now().toISO(),
-    icon: '🍎',
     transactionsCount: 0,
   },
   {
-    id: categoryIds.other,
-    title: 'Other',
-    categoryType: 'exp',
+    id: uuidv4(),
+    title: expenseCategoryTitles.other,
+    categoryType: categoryTypes.expense,
     createdAt: DateTime.now().toISO(),
-    icon: '💳',
     transactionsCount: 0,
   },
 
   // Income
   {
-    id: categoryIds.paycheck,
-    title: 'Paycheck',
-    categoryType: 'inc',
+    id: uuidv4(),
+    title: incomeCategoryTitles.paycheck,
+    categoryType: categoryTypes.income,
     createdAt: DateTime.now().toISO(),
-    icon: '💰',
     transactionsCount: 0,
   },
   {
-    id: categoryIds.gift,
-    title: 'Gift',
-    categoryType: 'inc',
+    id: uuidv4(),
+    title: incomeCategoryTitles.gift,
+    categoryType: categoryTypes.income,
     createdAt: DateTime.now().toISO(),
-    icon: '🎁',
     transactionsCount: 0,
   },
 ];

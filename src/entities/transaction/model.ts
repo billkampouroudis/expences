@@ -1,11 +1,11 @@
-export type TransactionType = 'inc' | 'exp';
+import { CategoryTitle, CategoryType } from '../category/model';
 
 export type Transaction = {
   id: string;
-  categoryId: string;
+  categoryTitle: CategoryTitle;
   amount: number;
   datetime: string;
   description: string;
-  categoryType: TransactionType;
+  categoryType: CategoryType;
   createdAt: string;
 };

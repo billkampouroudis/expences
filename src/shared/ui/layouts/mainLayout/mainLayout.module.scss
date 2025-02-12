@@ -10,7 +10,7 @@ $mainContentOffset: -30px;
   }
 
   .header {
-    background: linear-gradient(30deg, #078a69, #07bb8e);
+    background: linear-gradient(30deg, #456965, #6c8884);
     min-height: $headerHeight;
     padding: 20px 20px 50px;
 
@@ -28,22 +28,15 @@ $mainContentOffset: -30px;
 
   .content {
     margin-top: $mainContentOffset;
-    border-radius: var(--mantine-radius-lg);
+    border-radius: var(--mantine-radius-lg) var(--mantine-radius-lg) 0 0;
     padding: 20px;
     z-index: 1;
+    min-height: calc(100vh - ($headerHeight - $mainContentOffset) - 10px);
 
     @include mantine.media-from(md) {
+      border-radius: var(--mantine-radius-lg);
       padding: 32px;
-    }
-
-    @include mantine.media-to(md) {
-      @include mantine.dark {
-        background-color: var(--mantine-color-dark-7);
-      }
-
-      @include mantine.light {
-        background-color: var(--mantine-color-gray-0);
-      }
+      min-height: auto;
     }
   }
 }

@@ -1,6 +1,2 @@
 export { fetchTransactions } from './transactions.api';
-export {
-  type TransactionDto,
-  type CreateTransactionDto,
-  type UpdateTransactionDto,
-} from './transactions.dto';
+export { type TransactionDto, type CreateTransactionDto } from './transactions.dto';

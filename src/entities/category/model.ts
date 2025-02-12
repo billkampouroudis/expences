@@ -1,10 +1,13 @@
-export type CategoryType = 'inc' | 'exp';
+import { categoryTitles, categoryTypes } from './consts';
+
+export type CategoryTitle = keyof typeof categoryTitles;
+
+export type CategoryType = keyof typeof categoryTypes;
 
 export type Category = {
   id: string;
-  title: string;
+  title: CategoryTitle;
   categoryType: CategoryType;
-  icon: string;
   transactionsCount: number;
   createdAt: string;
 };

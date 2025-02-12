@@ -1,25 +1,14 @@
 .heading {
   @include mantine.dark {
-    color: var(--mantine-color-gray-3);
+    color: var(--mantine-color-ironwood-0);
   }
 
   @include mantine.light {
-    color: var(--mantine-color-gray-8);
+    color: var(--mantine-color-ironwood-5);
   }
 
-  &:is(h1) {
-    font-size: 2rem;
-
-    @include mantine.media-from(md) {
-      font-size: 2.5rem;
-    }
-
-    @include mantine.media-from(lg) {
-      font-size: 3rem;
-    }
-  }
-
-  &:is(h2) {
+  &:is(h1),
+  &[data-size='h1'] {
     font-size: 1.75rem;
 
     @include mantine.media-from(md) {
@@ -27,11 +16,12 @@
     }
 
     @include mantine.media-from(lg) {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
     }
   }
 
-  &:is(h3) {
+  &:is(h2),
+  &[data-size='h2'] {
     font-size: 1.5rem;
 
     @include mantine.media-from(md) {
@@ -43,7 +33,8 @@
     }
   }
 
-  &:is(h4) {
+  &:is(h3),
+  &[data-size='h3'] {
     font-size: 1.25rem;
 
     @include mantine.media-from(md) {
@@ -55,11 +46,12 @@
     }
   }
 
-  &:is(h5) {
-    font-size: 1rem;
+  &:is(h4),
+  &[data-size='h4'] {
+    font-size: 1.125rem;
 
     @include mantine.media-from(md) {
-      font-size: 1.25rem;
+      font-size: 1.375rem;
     }
 
     @include mantine.media-from(lg) {
@@ -67,7 +59,21 @@
     }
   }
 
-  &:is(h6) {
+  &:is(h5),
+  &[data-size='h5'] {
+    font-size: 1rem;
+
+    @include mantine.media-from(md) {
+      font-size: 1.125rem;
+    }
+
+    @include mantine.media-from(lg) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &:is(h6),
+  &[data-size='h6'] {
     font-size: 0.875rem;
 
     @include mantine.media-from(md) {
@@ -75,17 +81,17 @@
     }
 
     @include mantine.media-from(lg) {
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
   }
 }
 
 .text {
   @include mantine.dark {
-    color: var(--mantine-color-gray-4);
+    color: var(--mantine-color-ironwood-1);
   }
 
   @include mantine.light {
-    color: var(--mantine-color-gray-8);
+    color: var(--mantine-color-ironwood-4);
   }
 }

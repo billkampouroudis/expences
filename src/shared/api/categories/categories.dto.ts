@@ -4,7 +4,6 @@ export type CategoryTypeDto = CategoryType;
 export type CreateCategoryDto = {
   title: string;
   categoryType: CategoryType;
-  icon: string;
 };
 
 export type CategoryDto = CreateCategoryDto & {

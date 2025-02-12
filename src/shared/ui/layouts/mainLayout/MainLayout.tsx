@@ -1,9 +1,10 @@
-import { MainLayoutProps } from './mainLayout.types.ts';
-// import MainMenu from '../../menus/mainMenu/MainMenu.tsx';
+import { MainLayoutProps } from './mainLayout.types';
 import { Card, Container, Paper } from '@mantine/core';
 import styles from './mainLayout.module.scss';
 
-export function Header({ children }: any) {
+export function Header(props: MainLayoutProps) {
+  const { children } = props;
+
   return (
     <Card radius="none" className={styles.header}>
       {children}
